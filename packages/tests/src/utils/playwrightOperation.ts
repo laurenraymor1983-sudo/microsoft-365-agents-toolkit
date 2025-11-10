@@ -240,25 +240,36 @@ export async function initPage(
 
         // Click add button
         console.log("click add button");
+        await page.screenshot({
+              path: getPlaywrightScreenshotPath("add_page_before"),
+              fullPage: true,
+            });
         let addBtn;
         try {
           addBtn = await page?.waitForSelector(
             "button[id='install-app-btn']:has-text('Add')"
           );
         } catch {
+          await page.screenshot({
+              path: getPlaywrightScreenshotPath("add_page_1stclick"),
+              fullPage: true,
+            });
           try {
             addBtn = await page?.waitForSelector(
               "button[id='install-app-btn']:has-text('Open')"
             );
           } catch {
             await page.screenshot({
-              path: getPlaywrightScreenshotPath("add_page"),
+              path: getPlaywrightScreenshotPath("open_page"),
               fullPage: true,
             });
             throw "error to add app";
           }
         }
-
+        await page.screenshot({
+              path: getPlaywrightScreenshotPath("found_open_page"),
+              fullPage: true,
+            });
         await addBtn?.click();
         await page.waitForTimeout(Timeout.longTimeWait);
         // verify add page is closed
