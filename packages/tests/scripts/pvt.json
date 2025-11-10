@@ -1,4 +1,9 @@
 {
+  "windows-latest": {
+    "node-22": [
+      "telemetry@open-vscode"
+    ]
+  },
   "ubuntu-latest": {
     "node-22": [
       "telemetry@open-vscode"
