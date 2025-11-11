@@ -247,9 +247,9 @@ export async function initPage(
         
         // verify add page is closed
         try {
-            await page.locator('#install-app-btn').nth(0).click();
-        }catch {
             await page.locator('#install-app-btn').nth(1).click();
+        }catch {
+            await page.locator('#install-app-btn').click();
         }
         
         await page.waitForTimeout(Timeout.longTimeWait);
