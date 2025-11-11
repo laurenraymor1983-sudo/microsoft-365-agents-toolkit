@@ -1804,7 +1804,7 @@ export async function validateNpm(
 ) {
   try {
     const searchPack = options?.npmName || "axios";
-    await messageExtensionChatWindow(page, Env.collaborator);
+    await messageExtensionChatWindow(page, "haolong@xxbdw.onmicrosoft.com");
     console.log("start to verify npm search");
     await page.waitForTimeout(Timeout.shortTimeLoading);
     const frame = await page.waitForSelector("div#app");
@@ -2901,7 +2901,7 @@ export async function messageExtensionChatWindow(
 }
 
 export async function messageExtensionActivate(page: Page, appName: string) {
-  await messageExtensionChatWindow(page, Env.collaborator);
+  await messageExtensionChatWindow(page, "haolong@xxbdw.onmicrosoft.com");
   console.log("start to activate message extension");
   const extButton = await page.waitForSelector(
     "button[title='Actions and apps']"
@@ -2936,7 +2936,7 @@ export async function messageExtensionActivate(page: Page, appName: string) {
 
 export async function validateCreatedCard(page: Page, appName: string) {
   try {
-    await messageExtensionChatWindow(page, Env.collaborator);
+    await messageExtensionChatWindow(page, "haolong@xxbdw.onmicrosoft.com");
     const frame = await page.waitForSelector("div#app");
     console.log("start to created card");
     await messageExtensionActivate(page, appName);
@@ -2965,7 +2965,7 @@ export async function validateCreatedCard(page: Page, appName: string) {
 
 export async function validateUnfurlCard(page: Page, appName: string) {
   try {
-    await messageExtensionChatWindow(page, Env.collaborator);
+    await messageExtensionChatWindow(page, "haolong@xxbdw.onmicrosoft.com");
     const frame = await page.waitForSelector("div#app");
     console.log("start to validate unfurl an adaptive card");
     const unfurlurl = "https://www.botframework.com/";
