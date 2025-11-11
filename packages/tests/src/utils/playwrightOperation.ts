@@ -244,11 +244,15 @@ export async function initPage(
               path: getPlaywrightScreenshotPath("add_page_before"),
               fullPage: true,
             });
-
         
         // verify add page is closed
-        await page.click('#install-app-btn');
+        await page.locator('#install-app-btn').nth(0).click();
         await page.waitForTimeout(Timeout.longTimeWait);
+
+        await page.screenshot({
+              path: getPlaywrightScreenshotPath("add_page_clicked"),
+              fullPage: true,
+            });
         // click Open button to add to Team, Chat or Meeting
         try {
           const openApp = await page?.waitForSelector(
