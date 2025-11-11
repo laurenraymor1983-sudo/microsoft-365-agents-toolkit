@@ -280,13 +280,16 @@ export async function initPage(
               state: "detached",
             }
           );
+          console.log("no add button, clicked")
         } catch {
+          await addBtn?.click();
           await page?.waitForSelector(
             "button[id='install-app-btn']:has-text('Open')",
             {
               state: "detached",
             }
           );
+          console.log("no open button, clicked")
         }
         await page.waitForTimeout(Timeout.shortTimeLoading);
         // click Open button to add to Team, Chat or Meeting
