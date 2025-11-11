@@ -244,54 +244,11 @@ export async function initPage(
               path: getPlaywrightScreenshotPath("add_page_before"),
               fullPage: true,
             });
-        let addBtn;
-        try {
-          addBtn = await page?.waitForSelector(
-            "button[id='install-app-btn']:has-text('Add')"
-          );
-        } catch {
-          await page.screenshot({
-              path: getPlaywrightScreenshotPath("add_page_1stclick"),
-              fullPage: true,
-            });
-          try {
-            addBtn = await page?.waitForSelector(
-              "button[id='install-app-btn']:has-text('Open')"
-            );
-          } catch {
-            await page.screenshot({
-              path: getPlaywrightScreenshotPath("open_page"),
-              fullPage: true,
-            });
-            throw "error to add app";
-          }
-        }
-        await page.screenshot({
-              path: getPlaywrightScreenshotPath("found_open_page"),
-              fullPage: true,
-            });
-        await addBtn?.click();
-        await page.waitForTimeout(Timeout.longTimeWait);
+
+        
         // verify add page is closed
-        try {
-          await page?.waitForSelector(
-            "button[id='install-app-btn']:has-text('Add')",
-            {
-              state: "detached",
-            }
-          );
-          console.log("no add button, clicked")
-        } catch {
-          await addBtn?.click();
-          await page?.waitForSelector(
-            "button[id='install-app-btn']:has-text('Open')",
-            {
-              state: "detached",
-            }
-          );
-          console.log("no open button, clicked")
-        }
-        await page.waitForTimeout(Timeout.shortTimeLoading);
+        await page.click('#install-app-btn');
+        await page.waitForTimeout(Timeout.longTimeWait);
         // click Open button to add to Team, Chat or Meeting
         try {
           const openApp = await page?.waitForSelector(
