@@ -246,7 +246,7 @@ export async function initPage(
             });
         
         // verify add page is closed
-        await page.locator('#install-app-btn').nth(0).click();
+        await page.locator('#install-app-btn').nth(1).click();
         await page.waitForTimeout(Timeout.longTimeWait);
 
         await page.screenshot({
