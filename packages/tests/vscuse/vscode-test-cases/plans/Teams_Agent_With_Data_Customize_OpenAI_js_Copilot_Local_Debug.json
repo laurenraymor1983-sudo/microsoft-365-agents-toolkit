@@ -1,0 +1,184 @@
+{
+  "plan_metadata": {
+    "version": "1.1",
+    "plan_id": "plan_4fac1aa9",
+    "execution_context": {
+      "delay_between_steps": 1,
+      "stop_on_error": true,
+      "precondition_wait_timeout": 30,
+      "precondition_retry_interval": 2,
+      "step_retry_count": 0
+    },
+    "total_steps": 5,
+    "created_at": "2025-11-27T00:16:09.250199",
+    "name": "Teams Agent With Data Customize OpenAI js Copilot Local Debug",
+    "description": "pending",
+    "generated_at": "2025-11-27T00:16:09.250199",
+    "execution_order": [
+      "plan_r_1127_001034",
+      "plan_r_0928_012254",
+      "step_90504450",
+      "step_f8045e71",
+      "step_c1f59c27",
+      "plan_r_1124_081758",
+      "step_c489e41d",
+      "step_2e0f9d31",
+      "plan_r_0928_014459",
+      "plan_r_1021_081410",
+      "plan_f355465c",
+      "plan_r_1125_031353"
+    ],
+    "tags": [],
+    "updated_at": "2025-11-27T00:41:55.298098"
+  },
+  "steps": [
+    {
+      "step_id": "step_90504450",
+      "agent": "interaction",
+      "tool": "click",
+      "parameters": {
+        "button": "left",
+        "dx": null,
+        "dy": null,
+        "key": null,
+        "keys": null,
+        "text": null,
+        "x": 378,
+        "y": 219
+      },
+      "description": "Click on the \"Teams Agents and Apps\" option within the \"New Project\" dropdown menu.",
+      "content_refs": [],
+      "timeout": 30,
+      "retry_count": 0,
+      "continue_on_error": "0",
+      "depends_on": [],
+      "preconditions": [
+        "dhash:378:219:16:5:694f2a5a942ad5c3",
+        "dhash:378:219:96:5:266254582cad5251",
+        "dhash:378:219:0:10:c0c88094b2717075"
+      ],
+      "postconditions": [],
+      "tags": [],
+      "screenshot": "step_90504450",
+      "created_at": "2025-11-27T00:16:09.266160",
+      "plan_id": "plan_4fac1aa9"
+    },
+    {
+      "step_id": "step_f8045e71",
+      "agent": "interaction",
+      "tool": "click",
+      "parameters": {
+        "button": "left",
+        "dx": null,
+        "dy": null,
+        "key": null,
+        "keys": null,
+        "text": null,
+        "x": 362,
+        "y": 127
+      },
+      "description": "Click on the \"Teams Agent with D...\" option in the dropdown menu under \"Teams Agent or App Using Teams AI Library\" to select it.",
+      "content_refs": [],
+      "timeout": 30,
+      "retry_count": 0,
+      "continue_on_error": "0",
+      "depends_on": [],
+      "preconditions": [
+        "dhash:362:127:16:5:ddd5b558ab100000",
+        "dhash:362:127:96:5:42a6c0912665d858",
+        "dhash:362:127:0:10:c0c88694b2717075"
+      ],
+      "postconditions": [],
+      "tags": [],
+      "screenshot": "step_f8045e71",
+      "created_at": "2025-11-27T00:16:09.280239",
+      "plan_id": "plan_4fac1aa9"
+    },
+    {
+      "step_id": "step_c1f59c27",
+      "agent": "interaction",
+      "tool": "click",
+      "parameters": {
+        "button": "left",
+        "dx": null,
+        "dy": null,
+        "key": null,
+        "keys": null,
+        "text": null,
+        "x": 304,
+        "y": 80
+      },
+      "description": "Click the \"Customize\" dropdown option in the \"Select an option to load your data\" menu within the \"Teams Agent with Data\" interface.",
+      "content_refs": [],
+      "timeout": 30,
+      "retry_count": 0,
+      "continue_on_error": "0",
+      "depends_on": [],
+      "preconditions": [
+        "dhash:304:80:16:5:c820241010a84010",
+        "dhash:304:80:96:5:5a9191844022ccb4",
+        "dhash:304:80:0:10:c0c0b094b2717075"
+      ],
+      "postconditions": [],
+      "tags": [],
+      "screenshot": "step_c1f59c27",
+      "created_at": "2025-11-27T00:16:09.294196",
+      "plan_id": "plan_4fac1aa9"
+    },
+    {
+      "step_id": "step_c489e41d",
+      "agent": "interaction",
+      "tool": "click",
+      "parameters": {
+        "button": "left",
+        "x": 266,
+        "y": 102
+      },
+      "description": "Click on the \"JavaScript\" option in the dropdown list under \"Programming Language\" in Visual Studio Code.",
+      "content_refs": [],
+      "timeout": 30,
+      "retry_count": 0,
+      "continue_on_error": "false",
+      "depends_on": [],
+      "preconditions": [
+        "dhash:266:102:16:5:841ccb688c738c00",
+        "dhash:266:102:96:5:3bc4c4a4acc7122b",
+        "dhash:266:102:0:10:d0989094b2717075"
+      ],
+      "postconditions": [],
+      "tags": [],
+      "screenshot": "step_c489e41d",
+      "created_at": "2025-11-27T00:16:09.309244",
+      "plan_id": "plan_4fac1aa9"
+    },
+    {
+      "step_id": "step_2e0f9d31",
+      "agent": "interaction",
+      "tool": "key_press",
+      "parameters": {
+        "key": "enter"
+      },
+      "description": "Press the \"Enter\" key to select the \"Default folder\" option under the \"Choose the folder where your project root folder will be located\" dropdown in Visual Studio Code's Workspace Folder setup interface.",
+      "content_refs": [],
+      "timeout": 30,
+      "retry_count": 0,
+      "continue_on_error": "false",
+      "depends_on": [],
+      "preconditions": [
+        "dhash:512:384:0:20:f0b09494b2717075"
+      ],
+      "postconditions": [],
+      "tags": [],
+      "screenshot": "step_2e0f9d31",
+      "created_at": "2025-11-27T00:16:09.323590",
+      "plan_id": "plan_4fac1aa9"
+    }
+  ],
+  "screenshots": {
+    "step_90504450": "step_90504450",
+    "step_f8045e71": "step_f8045e71",
+    "step_c1f59c27": "step_c1f59c27",
+    "step_c489e41d": "step_c489e41d",
+    "step_2e0f9d31": "step_2e0f9d31"
+  }
+}
